@@ -1,0 +1,26 @@
+body {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: #C3E8ED;
+    color: #0A515B;
+    text-align: center;
+    margin: 80px;
+}
+
+.link-list {
+    list-style: none;
+    padding: 0;
+}
+
+.link-list li {
+    margin: 15px 0;
+}
+.link-list a {
+    text-decoration: none;
+    font-weight: semibold;
+    font-size: large;
+    color: #0A515B;
+}
+
+.link-list a:hover {
+    color: #ffffff;
+}
