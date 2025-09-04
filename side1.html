@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Udregn sum</h1>
+<div id="result"></div>
+    <script> 
+        const tal1 = parseInt(prompt("Indtast første tal:"));
+        const tal2 = parseInt(prompt("Indtast andet tal:"));
+
+        let resultText = "";
+        if (isNaN(tal1) || isNaN(tal2)) {
+            resultText = "Du skal indtaste to gyldige tal";
+    }
+
+        else {
+            let sum = 0;
+            for (let i = 1; i <= 1000; i++) {
+                if (i % tal1 === 0 || i % tal2 === 0) {
+                    sum += i;
+                }
+            }
+            resultText = "Summen er: " + sum;
+
+    }
+
+    // Skriver resultatet ud på siden:
+
+            document.getElementById("result").innerText = resultText;
+        
+    </script>
+</body>
+</html>

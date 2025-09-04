@@ -4,8 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>Random numbers</h1>
+    <div id="result"></div>
+
+    <script>
+        //Laver 2 forskellige tal mellem 1 og 100
+        const tal1 = Math.floor(Math.random() * 100) + 1;
+        const tal2 = Math.floor(Math.random() * 100) + 1;
+
+        //Liste over matematiske operationer
+        const operationer = ["+", "-", "*", "/", "**", "%"];
+
+        //Vælg en tilfældig operation
+        const op = operationer[Math.floor(Math.random() * operationer.length)];
+
+        let resultat;
+
+        //Udfør operationen
+
+        switch(op) {
+            case "+":
+                resultat = tal1 + tal2;
+                break;
+            case "-":
+                resultat = tal1 - tal2;
+                break;
+            case "*":
+                resultat = tal1 * tal2;
+                break;
+            case "/":
+                resultat = (tal1 / tal2).toFixed(2); //Får 2 decimaler
+                break;
+            case "**":
+                resultat = tal1 ** tal2;
+                break;
+            case "%":
+                resultat = tal1 % tal2;
+                break;        
+        }
+
+        //Vis resultatet på siden
+        document.getElementById("result").innerText = 
+        `Tal 1: ${tal1}\nTal 2: ${tal2}\nOperation: ${op}\nResultat: ${resultat}`;
+        
+
+    </script>
     
 </body>
 </html>

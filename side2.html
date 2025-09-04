@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <h1>Sum af cifre</h1>
+   <div id="result"></div> 
+
+    <script>
+        // Spørg brugeren om et tal
+        let tal = parseInt(prompt("Indtast et tal:"));
+        let sum = 0;
+
+        if (isNaN(tal)) {
+            document.getElementById(result).innerText = "Du skal indtaste et gyldigt tal";
+        } else {
+            while (tal > 0) {
+                sum += tal % 10; //tag sidste ciffer og læg til sum
+                tal = Math.floor(tal / 10) //Fjern sidste ciffer
+            }
+            document.getElementById("result").innerText = "Summen af cifrene er: " + sum;
+        }
+    </script>
+</body>
+</html>
