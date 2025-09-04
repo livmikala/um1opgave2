@@ -24,3 +24,10 @@ body {
 .link-list a:hover {
     color: #ffffff;
 }
+
+.tilbage-knap {
+    text-decoration: none;
+    font-weight: regular;
+    color: #0A515B;
+}
+
